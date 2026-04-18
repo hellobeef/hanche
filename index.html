@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>剪辑主页 | MD3 Style</title>
+  <style>
+    /* 基础重置 & MD3 全局规范 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    :root {
+      --md3-primary: #1E88E5;
+      --md3-surface: #ffffff;
+      --md3-background: #F5F7FA;
+      --md3-on-surface: #1D1B20;
+      --md3-on-surface-variant: #44474E;
+      --md3-radius: 24px;
+      --md3-shadow: 0 2px 6px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    body {
+      background: var(--md3-background);
+      color: var(--md3-on-surface);
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* 头部卡片 MD3 */
+    .profile-card {
+      background: var(--md3-surface);
+      border-radius: var(--md3-radius);
+      padding: 32px;
+      box-shadow: var(--md3-shadow);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      background: var(--md3-primary);
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 28px;
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .title {
+      font-size: 16px;
+      color: var(--md3-on-surface-variant);
+    }
+
+    /* MD3 内容卡片 */
+    .card {
+      background: var(--md3-surface);
+      border-radius: var(--md3-radius);
+      padding: 24px;
+      box-shadow: var(--md3-shadow);
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--md3-primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* 剪辑文案样式 */
+    .edit-desc {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--md3-on-surface-variant);
+      text-align: left;
+    }
+
+    /* MD3 标签组 */
+    .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .chip {
+      background: rgba(30,136,229,0.12);
+      color: var(--md3-primary);
+      padding: 8px 16px;
+      border-radius: 16px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* 链接样式 */
+    .link-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link-item {
+      color: var(--md3-primary);
+      text-decoration: none;
+      font-size: 15px;
+      padding: 10px 0;
+      transition: opacity 0.2s;
+    }
+
+    .link-item:hover {
+      opacity: 0.8;
+    }
+
+    /* 页脚 */
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      font-size: 14px;
+      color: var(--md3-on-surface-variant);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 个人信息卡片 -->
+    <div class="profile-card">
+      <div class="avatar">剪</div>
+      <h1 class="name">阿泽</h1>
+      <p class="title">视频剪辑师 | 氛围感混剪 | 节奏向剪辑</p>
+    </div>
+
+    <!-- 关于我（剪辑文案） -->
+    <div class="card">
+      <h2 class="card-title">📝 关于我</h2>
+      <p class="edit-desc">
+        以帧为笔，以剪为序<br>
+        捕捉光影，定格情绪<br>
+        擅长氛围感剪辑、影视混剪、Vlog叙事<br>
+        让每一帧画面都有呼吸感，让每一段节奏都有冲击力
+      </p>
+    </div>
+
+    <!-- 剪辑风格 -->
+    <div class="card">
+      <h2 class="card-title">🎬 剪辑风格</h2>
+      <div class="chip-group">
+        <span class="chip">氛围感</span>
+        <span class="chip">卡点节奏</span>
+        <span class="chip">影视混剪</span>
+        <span class="chip">历史剪辑</span>
+        <span class="chip">转场丝滑</span>
+      </div>
+    </div>
+
+    <!-- 常用工具 -->
+    <div class="card">
+      <h2 class="card-title">🛠️ 常用工具</h2>
+      <div class="chip-group">
+        <span class="chip">Cupcut</span>
+        <span class="chip">AM</span>
+        <span class="chip">剪映</span>
+        <span class="chip">快影</span>
+      </div>
+    </div>
+
+    <!-- 联系我 -->
+    <div class="card">
+      <h2 class="card-title">📮 联系合作</h2>
+      <div class="link-group">
+        <a href="mailto:秘密@qq.com" class="link-item">✉️ 邮箱：edit@qq.com</a>
+        <a href="#" class="link-item">🎞️ B站：寒彻edit</a>
+        <a href="#" class="link-item">快手：寒彻^</a>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Clip Profile • MD3 Design
+    </footer>
+  </div>
+</body>
+</html>
