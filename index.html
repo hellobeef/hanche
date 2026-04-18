@@ -45,16 +45,14 @@
       margin-bottom: 24px;
     }
 
+    /* 适配图片头像的样式 */
     .avatar {
       width: 100px;
       height: 100px;
-      background: var(--md3-primary);
       border-radius: 50%;
       margin: 0 auto 20px;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-size: 28px;
+      object-fit: cover; /* 保持图片比例，防止拉伸变形 */
+      display: block; /* 消除图片默认的inline间隙 */
     }
 
     .name {
@@ -143,10 +141,10 @@
 
 <body>
   <div class="container">
-    <!-- 个人信息卡片 -->
+    <!-- 个人信息卡片（已替换头像） -->
     <div class="profile-card">
-      <div class="avatar">剪</div>
-      <h1 class="name">阿泽</h1>
+      <img src="./touxiang.png" class="avatar" alt="个人头像">
+      <h1 class="name">寒彻^</h1>
       <p class="title">视频剪辑师 | 氛围感混剪 | 节奏向剪辑</p>
     </div>
 
@@ -195,7 +193,7 @@
     </div>
 
     <footer>
-      © 2025 Clip Profile • MD3 Design
+      @寒彻Edit | @HANCHE EDIT
     </footer>
   </div>
 </body>
